@@ -41,10 +41,20 @@ root
 - And a blank password ("" — literally nothing)
 
 Submit root flag
+
+Use tlenet to connect to the ip and enter root, admin or guest etc.. ) later do ls and cat 
+
 ![image](https://github.com/user-attachments/assets/2677d238-2adb-459e-a015-d43fb49d062f)
 
 - The Flag: 
 ![image](https://github.com/user-attachments/assets/0a85f5cf-613b-4b23-bf22-5e3f586d13a6)
 
-
+But in general 
+- cat /etc/passwd
+![image](https://github.com/user-attachments/assets/994bf9a4-beb8-40c4-8d89-73ff38772d68)
+- Look for users with a valid shell (e.g., /bin/bash, not /usr/sbin/nologin)
+- root has /bin/bash "root:x:0:0:root:/root:/bin/bash"
+- sudo cat /etc/shadow or 
+- sudo grep '^[^:]*::' /etc/shadow
+- sudo passwd -S <username>
 
